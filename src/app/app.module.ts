@@ -14,6 +14,10 @@ import { MatCardModule } from '@angular/material/card';
 import { HomeComponent } from './views/home/home.component';
 import { EstadoCrudComponent } from './views/estado-crud/estado-crud.component';
 import { CidadeCrudComponent } from './views/cidade-crud/cidade-crud.component';
+import { RedDirective } from './directives/red.directive';
+import { MyForDirective } from './directives/my-for.directive';
+import { EstadoCreateComponent } from './components/estado/estado-create/estado-create.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,10 @@ import { CidadeCrudComponent } from './views/cidade-crud/cidade-crud.component';
     NavComponent,
     HomeComponent,
     EstadoCrudComponent,
-    CidadeCrudComponent
+    CidadeCrudComponent,
+    RedDirective,
+    MyForDirective,
+    EstadoCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +39,8 @@ import { CidadeCrudComponent } from './views/cidade-crud/cidade-crud.component';
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
