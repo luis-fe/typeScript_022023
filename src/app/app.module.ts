@@ -24,6 +24,10 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { EstadoReadComponent } from './components/estado/estado-read/estado-read.component';
+import { EstadoRead2Component } from './components/estado/estado-read2/estado-read2.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -37,7 +41,8 @@ import { EstadoReadComponent } from './components/estado/estado-read/estado-read
     RedDirective,
     MyForDirective,
     EstadoCreateComponent,
-    EstadoReadComponent
+    EstadoReadComponent,
+    EstadoRead2Component
   ],
   imports: [
     BrowserModule,
@@ -52,7 +57,10 @@ import { EstadoReadComponent } from './components/estado/estado-read/estado-read
     HttpClientModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

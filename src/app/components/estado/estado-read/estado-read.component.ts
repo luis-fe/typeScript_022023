@@ -10,6 +10,7 @@ import { EstadoService } from '../estado.service';
 export class EstadoReadComponent implements OnInit {
 
   estados: Estado[] = []
+  displayedColumns = ['id', 'nome', 'sigla', 'action']
 
   constructor(private estadoService: EstadoService) {}
 
