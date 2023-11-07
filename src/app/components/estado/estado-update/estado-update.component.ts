@@ -20,18 +20,22 @@ export class EstadoUpdateComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get("id");
+    const id: string | null  = this.route.snapshot.paramMap.get("id");
     console.log(id + " Passou aki")
-    this.estadoService.readById(id).subscribe((estado) => {
-      this.estado = estado
-    });
+
+    if (id !== null) {
+      this.estadoService.readById(id).subscribe((estado) => {
+        this.estado = estado
+      }, error => alert("Não foi possivel executar a operação!"));
+    }
+
   }
 
   updateEstado(): void {
     this.estadoService.update(this.estado).subscribe(()=> {
       this.estadoService.showMessage("Estado atualizado com sucesso!");
       this.router.navigate(["/estados"]);
-    });
+    }, error => alert("Não foi possivel executar a operação!"));
   }
 
   cancel(): void {
