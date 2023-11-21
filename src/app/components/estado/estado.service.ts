@@ -35,4 +35,9 @@ export class EstadoService {
     return this.http.put<Estado>(url, estado);
   }
 
+  delete(id: number): Observable<Estado> {
+    const url = this.baseUrl + "/" + id;
+    return this.http.delete<Estado>(url);
+  }
+
 }

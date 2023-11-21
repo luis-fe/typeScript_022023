@@ -28,7 +28,6 @@ export class EstadoUpdateComponent implements OnInit {
         this.estado = estado
       }, error => alert("Não foi possivel executar a operação!"));
     }
-
   }
 
   updateEstado(): void {
